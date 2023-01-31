@@ -551,16 +551,22 @@ console.log(getTitleText(2))
 
 // ---
 
+interface User {
+  name: string
+  social?: {
+    facebook: boolean
+    twitter: boolean
+  }
+}
 
+let user: User
 
+user = { name: 'Kazumasa', social: { facebook: true, twitter: true } }
+console.log(user.social?.facebook)
+console.log(user.social?.twitter)
 
+user = { name: 'kazukun' }
+console.log(user.social?.facebook)
+console.log(user.social?.twitter)
 
-
-
-
-
-
-
-
-
-
+// ---

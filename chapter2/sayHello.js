@@ -367,6 +367,7 @@
 //     this.z
 //   }
 // }
+var _a, _b, _c, _d;
 // ---
 var DirectionNotEnum = {
     'Up': 0,
@@ -500,5 +501,11 @@ var getTitleText = function (type) {
 console.log(getTitleText(0));
 console.log(getTitleText(1));
 console.log(getTitleText(2));
-// console.log(getTitleText(3))
+var user;
+user = { name: 'Kazumasa', social: { facebook: true, twitter: true } };
+console.log((_a = user.social) === null || _a === void 0 ? void 0 : _a.facebook);
+console.log((_b = user.social) === null || _b === void 0 ? void 0 : _b.twitter);
+user = { name: 'kazukun' };
+console.log((_c = user.social) === null || _c === void 0 ? void 0 : _c.facebook);
+console.log((_d = user.social) === null || _d === void 0 ? void 0 : _d.twitter);
 // ---
