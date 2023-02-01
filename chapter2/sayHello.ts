@@ -570,3 +570,10 @@ console.log(user.social?.facebook)
 console.log(user.social?.twitter)
 
 // ---
+
+function processUser(user?: User) {
+  let s = user!.name
+  console.log(s)
+}
+
+processUser(user)

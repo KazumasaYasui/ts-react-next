@@ -509,3 +509,8 @@ user = { name: 'kazukun' };
 console.log((_c = user.social) === null || _c === void 0 ? void 0 : _c.facebook);
 console.log((_d = user.social) === null || _d === void 0 ? void 0 : _d.twitter);
 // ---
+function processUser(user) {
+    var s = user.name;
+    console.log(s);
+}
+processUser(user);
