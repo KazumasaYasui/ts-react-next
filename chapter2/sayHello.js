@@ -514,3 +514,18 @@ function processUser(user) {
     console.log(s);
 }
 processUser(user);
+// ---
+function addOne(value) {
+    if (typeof value === 'string') {
+        return Number(value) + 1;
+    }
+    return value + 1;
+}
+console.log(addOne(10));
+console.log(addOne('20'));
+// let response = {}
+var response = { info: { name: 'kazukun', age: 30 } };
+var user2 = response;
+if (user2.info) {
+    console.log(user2.info.name);
+}

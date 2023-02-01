@@ -577,3 +577,31 @@ function processUser(user?: User) {
 }
 
 processUser(user)
+
+// ---
+
+function addOne(value: number | string) {
+  if (typeof value === 'string') {
+    return Number(value) + 1
+  }
+  return value + 1
+}
+
+console.log(addOne(10))
+console.log(addOne('20'))
+
+type User2 = {
+  info?: {
+    name: string;
+    age: number;
+  }
+}
+
+// let response = {}
+let response = { info: { name: 'kazukun', age: 30 } }
+
+const user2 = (response as any) as User2
+
+if (user2.info) {
+  console.log(user2.info.name)
+}
