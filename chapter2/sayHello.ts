@@ -605,3 +605,33 @@ const user2 = (response as any) as User2
 if (user2.info) {
   console.log(user2.info.name)
 }
+
+// ---
+
+interface User3 {
+  name: string;
+  age: number;
+  email: string;
+}
+
+type UserKey = keyof User3
+
+const key1: UserKey = 'name'
+// const key2: UserKey = 'phone'
+console.log(key1)
+
+function getProperty<T, K extends keyof T>(obj: T, key: K): T[K] {
+  return obj[key]
+}
+
+const user3: User3 = {
+  name: 'Kazumasa',
+  age: 30,
+  email: 'kazu@example.com',
+}
+
+const userName = getProperty(user3, 'name')
+const userAge = getProperty(user3, 'age')
+const userEmail = getProperty(user3, 'email')
+// const userGender = getProperty(user3, 'gender')
+console.log(userName, userAge, userEmail)

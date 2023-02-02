@@ -529,3 +529,19 @@ var user2 = response;
 if (user2.info) {
     console.log(user2.info.name);
 }
+var key1 = 'name';
+// const key2: UserKey = 'phone'
+console.log(key1);
+function getProperty(obj, key) {
+    return obj[key];
+}
+var user3 = {
+    name: 'Kazumasa',
+    age: 30,
+    email: 'kazu@example.com'
+};
+var userName = getProperty(user3, 'name');
+var userAge = getProperty(user3, 'age');
+var userEmail = getProperty(user3, 'email');
+// const userGender = getProperty(user3, 'gender')
+console.log(userName, userAge, userEmail);
