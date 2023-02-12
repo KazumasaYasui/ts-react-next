@@ -635,3 +635,85 @@ const userAge = getProperty(user3, 'age')
 const userEmail = getProperty(user3, 'email')
 // const userGender = getProperty(user3, 'gender')
 console.log(userName, userAge, userEmail)
+
+// ---
+
+type SupportVersions = {
+  [env: number]: boolean;
+}
+
+let versions: SupportVersions = {
+  102: false,
+  103: false,
+  104: true,
+  // 'v105': true,
+}
+console.log(versions)
+
+// ---
+
+type User4 = {
+  readonly name: string;
+  readonly gender: string;
+}
+
+let user4: User4 = { name: 'Kazumasa', gender: 'Male' }
+
+// user4.gender = 'Female'
+
+console.log(`name: ${user4.name}, gender: ${user4.gender}`)
+
+type User5 = {
+  name: string;
+  gender: string;
+}
+
+type User5ReadOnly = Readonly<User5>
+
+let user5: User5 = { name: 'Kazumasa', gender: 'Male' }
+let user5ReadOnly: User5ReadOnly =  { name: 'Kazumasa', gender: 'Male' }
+
+user5.name = 'Kazukun'
+// user5ReadOnly.name = 'Kazukun'
+
+console.log(user5, user5ReadOnly)
+
+// ---
+
+const x: unknown = 123
+const y: unknown = 'Hello'
+
+// console.log(x.toFixed(1))
+// console.log(y.toLowerCase())
+
+if (typeof x === 'number') {
+  console.log(x.toFixed(1))
+}
+
+if (typeof y === 'string') {
+  console.log(y.toLowerCase())
+}
+
+// ---
+
+// {
+//   function fetchFromServer(id: string): Promise<{ success: boolean }> {
+//     return new Promise(resolve => {
+//       setTimeout(() => {
+//         resolve({success: true})
+//       }, 100)
+//     })
+//   }
+//
+//   async function asyncFunc(): Promise<string> {
+//     const result = await fetchFromServer('111')
+//     return `The result: ${result.success}`
+//   }
+//
+//   (async () => {
+//     const result = await asyncFunc()
+//     console.log(result)
+//   })()
+//
+//   asyncFunc().then(result => console.log(result))
+// }

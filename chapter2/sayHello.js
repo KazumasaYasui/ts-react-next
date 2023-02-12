@@ -545,3 +545,50 @@ var userAge = getProperty(user3, 'age');
 var userEmail = getProperty(user3, 'email');
 // const userGender = getProperty(user3, 'gender')
 console.log(userName, userAge, userEmail);
+var versions = {
+    102: false,
+    103: false,
+    104: true
+};
+console.log(versions);
+var user4 = { name: 'Kazumasa', gender: 'Male' };
+// user4.gender = 'Female'
+console.log("name: ".concat(user4.name, ", gender: ").concat(user4.gender));
+var user5 = { name: 'Kazumasa', gender: 'Male' };
+var user5ReadOnly = { name: 'Kazumasa', gender: 'Male' };
+user5.name = 'Kazukun';
+// user5ReadOnly.name = 'Kazukun'
+console.log(user5, user5ReadOnly);
+// ---
+var x = 123;
+var y = 'Hello';
+// console.log(x.toFixed(1))
+// console.log(y.toLowerCase())
+if (typeof x === 'number') {
+    console.log(x.toFixed(1));
+}
+if (typeof y === 'string') {
+    console.log(y.toLowerCase());
+}
+// ---
+// {
+//   function fetchFromServer(id: string): Promise<{ success: boolean }> {
+//     return new Promise(resolve => {
+//       setTimeout(() => {
+//         resolve({success: true})
+//       }, 100)
+//     })
+//   }
+//
+//   async function asyncFunc(): Promise<string> {
+//     const result = await fetchFromServer('111')
+//     return `The result: ${result.success}`
+//   }
+//
+//   (async () => {
+//     const result = await asyncFunc()
+//     console.log(result)
+//   })()
+//
+//   asyncFunc().then(result => console.log(result))
+// }
