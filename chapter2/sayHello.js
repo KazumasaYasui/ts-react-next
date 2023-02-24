@@ -408,10 +408,10 @@ var _a, _b, _c, _d;
 exports.__esModule = true;
 // ---
 var DirectionNotEnum = {
-    'Up': 0,
-    'Down': 1,
-    'Left': 2,
-    'Right': 3
+    Up: 0,
+    Down: 1,
+    Left: 2,
+    Right: 3
 };
 var DirectionNum;
 (function (DirectionNum) {
@@ -587,6 +587,7 @@ var versions = {
     102: false,
     103: false,
     104: true
+    // 'v105': true,
 };
 console.log(versions);
 var user4 = { name: 'Kazumasa', gender: 'Male' };
@@ -629,6 +630,7 @@ function asyncFunc() {
         });
     });
 }
+;
 (function () { return __awaiter(void 0, void 0, void 0, function () {
     var result;
     return __generator(this, function (_a) {

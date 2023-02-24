@@ -371,10 +371,10 @@
 // ---
 
 const DirectionNotEnum = {
-  'Up': 0,
-  'Down': 1,
-  'Left': 2,
-  'Right': 3
+  Up: 0,
+  Down: 1,
+  Left: 2,
+  Right: 3
 }
 
 enum DirectionNum {
@@ -413,7 +413,7 @@ class Queue<T> {
   }
 
   pop(): T | undefined {
-    return  this.array.shift()
+    return this.array.shift()
   }
 
   getArray(): T[] {
@@ -450,27 +450,27 @@ printId2('222')
 printId2(undefined)
 
 type Identity = {
-  id: number | string;
-  name: string;
+  id: number | string
+  name: string
 }
 
 type Contact = {
-  name: string;
-  email: string;
-  phone: string;
+  name: string
+  email: string
+  phone: string
 }
 
 type IdentityOrContact = Identity | Contact
 
 const id: IdentityOrContact = {
   id: '111',
-  name: 'Kazumasa',
+  name: 'Kazumasa'
 }
 
 const contact: IdentityOrContact = {
   name: 'Kazumasa',
   email: 'hoge@example.com',
-  phone: '000-1111-2222',
+  phone: '000-1111-2222'
 }
 
 console.log(id, contact)
@@ -481,7 +481,7 @@ const employee: Employee = {
   id: '111',
   name: 'Kazumasa',
   email: 'hoge@example.com',
-  phone: '000-1111-2222',
+  phone: '000-1111-2222'
 }
 
 // const employeeContact: Employee = {
@@ -527,7 +527,7 @@ console.log(foo(1))
 enum PageType {
   ViewProfile,
   EditProfile,
-  ChangePassword,
+  ChangePassword
 }
 
 const getTitleText = (type: PageType) => {
@@ -592,15 +592,15 @@ console.log(addOne('20'))
 
 type User2 = {
   info?: {
-    name: string;
-    age: number;
+    name: string
+    age: number
   }
 }
 
 // let response = {}
 let response = { info: { name: 'kazukun', age: 30 } }
 
-const user2 = (response as any) as User2
+const user2 = response as any as User2
 
 if (user2.info) {
   console.log(user2.info.name)
@@ -609,9 +609,9 @@ if (user2.info) {
 // ---
 
 interface User3 {
-  name: string;
-  age: number;
-  email: string;
+  name: string
+  age: number
+  email: string
 }
 
 type UserKey = keyof User3
@@ -627,7 +627,7 @@ function getProperty<T, K extends keyof T>(obj: T, key: K): T[K] {
 const user3: User3 = {
   name: 'Kazumasa',
   age: 30,
-  email: 'kazu@example.com',
+  email: 'kazu@example.com'
 }
 
 const userName = getProperty(user3, 'name')
@@ -639,13 +639,13 @@ console.log(userName, userAge, userEmail)
 // ---
 
 type SupportVersions = {
-  [env: number]: boolean;
+  [env: number]: boolean
 }
 
 let versions: SupportVersions = {
   102: false,
   103: false,
-  104: true,
+  104: true
   // 'v105': true,
 }
 console.log(versions)
@@ -653,8 +653,8 @@ console.log(versions)
 // ---
 
 type User4 = {
-  readonly name: string;
-  readonly gender: string;
+  readonly name: string
+  readonly gender: string
 }
 
 let user4: User4 = { name: 'Kazumasa', gender: 'Male' }
@@ -664,14 +664,14 @@ let user4: User4 = { name: 'Kazumasa', gender: 'Male' }
 console.log(`name: ${user4.name}, gender: ${user4.gender}`)
 
 type User5 = {
-  name: string;
-  gender: string;
+  name: string
+  gender: string
 }
 
 type User5ReadOnly = Readonly<User5>
 
 let user5: User5 = { name: 'Kazumasa', gender: 'Male' }
-let user5ReadOnly: User5ReadOnly =  { name: 'Kazumasa', gender: 'Male' }
+let user5ReadOnly: User5ReadOnly = { name: 'Kazumasa', gender: 'Male' }
 
 user5.name = 'Kazukun'
 // user5ReadOnly.name = 'Kazukun'
@@ -697,9 +697,9 @@ if (typeof y === 'string') {
 // ---
 
 function fetchFromServer(id: string): Promise<{ success: boolean }> {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     setTimeout(() => {
-      resolve({success: true})
+      resolve({ success: true })
     }, 100)
   })
 }
@@ -709,12 +709,12 @@ async function asyncFunc(): Promise<string> {
   return `The result: ${result.success}`
 }
 
-(async () => {
+;(async () => {
   const result = await asyncFunc()
   console.log(result)
 })()
 
-asyncFunc().then(result => console.log(result))
+asyncFunc().then((result) => console.log(result))
 
 // ---
 
