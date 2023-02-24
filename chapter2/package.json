@@ -8,6 +8,7 @@
   },
   "scripts": {
     "prettier-format": "prettier --config .prettierrc '*.ts' --write",
-    "lint": "eslint --config .eslintrc.js '*.ts'"
+    "lint": "eslint --config .eslintrc.js '*.ts'",
+    "tsc": "tsc -p tsconfig.json --target es5"
   }
 }

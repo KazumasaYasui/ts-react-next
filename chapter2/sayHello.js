@@ -647,3 +647,9 @@ asyncFunc().then(function (result) { return console.log(result); });
 // ---
 var hello_1 = require("./lib/hello");
 (0, hello_1.hello)('Kazumasa');
+// ---
+// コンパイルオプションのチェック用
+function hello2(name) {
+    console.log("Hello ".concat(name));
+}
+hello2('Kazumasa');

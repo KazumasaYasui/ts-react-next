@@ -721,3 +721,17 @@ asyncFunc().then((result) => console.log(result))
 import { hello } from './lib/hello'
 
 hello('Kazumasa')
+
+// ---
+// コンパイルオプションのチェック用
+
+// error TS7006: Parameter 'name' implicitly has an 'any' type.
+function hello2(name: string) {
+  console.log(`Hello ${name}`)
+}
+hello2('Kazumasa')
+
+// error TS2322: Type 'null' is not assignable to type 'Date'.
+let date: Date | null
+date = new Date()
+date = null
