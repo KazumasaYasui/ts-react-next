@@ -6,12 +6,22 @@ const Hello = () => {
     // アラートを出す
     alert('hello')
   }
+  // 変更時に呼ばれる関数
+  const onChange = (str: string) => {
+    // アラートを出す
+    alert(str)
+  }
   const text = 'Hello, React'
 
   return (
-    <div onClick={onClick}>
-      {text}
-    </div>
+    <>
+      <div onClick={onClick}>
+        {text}
+      </div>
+      <div>
+        <input type='text' onChange={(e) => onChange(e.target.value)} />
+      </div>
+    </>
   )
 }
 
