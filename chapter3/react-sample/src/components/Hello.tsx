@@ -3,12 +3,10 @@
 const Hello = () => {
   // クリック時に呼ばれる関数
   const onClick = () => {
-    // アラートを出す
     alert('hello')
   }
   // 変更時に呼ばれる関数
   const onChange = (str: string) => {
-    // アラートを出す
     alert(str)
   }
   const text = 'Hello, React'
