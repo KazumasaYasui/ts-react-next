@@ -11,6 +11,7 @@ import { Counter as Counter1 } from './components/CounterWithUseState';
 import { Counter as Counter2 } from './components/CounterWithUseReducer';
 import { Parent } from './components/Parent';
 import { Parent as UseCallbackSample } from './components/UseCallbackSample';
+import { UseMemoSample } from './components/UseMemoSample';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(
@@ -28,6 +29,7 @@ root.render(
     <Counter2 initialValue={0} />
     <Parent />
     <UseCallbackSample />
+    <UseMemoSample />
   </React.StrictMode>
 );
 
