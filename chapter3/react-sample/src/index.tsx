@@ -9,6 +9,7 @@ import ContainerSample from './components/ContainerSample';
 import ContextSample from './components/ContextSample';
 import { Counter as Counter1 } from './components/CounterWithUseState';
 import { Counter as Counter2 } from './components/CounterWithUseReducer';
+import { Parent } from './components/Parent';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(
@@ -24,6 +25,7 @@ root.render(
     <ContextSample />
     <Counter1 initialValue={0} />
     <Counter2 initialValue={0} />
+    <Parent />
   </React.StrictMode>
 );
 
