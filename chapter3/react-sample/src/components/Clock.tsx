@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, {useState, useEffect, useLayoutEffect} from 'react'
 
 // タイマーを呼び出す周期（ミリ秒）
 const UPDATE_CYCLE = 1000
@@ -32,13 +32,14 @@ export const Clock = () => {
     const timer = setInterval(() => {
       setTimestamp(new Date())
     }, UPDATE_CYCLE)
+    // タイマーをクリアするクリーンアップ関数
     return () => clearInterval(timer)
   }, [])
 
   // localStorageからlocaleの値を読み込むための副作用
-  useEffect(() => {
+  useLayoutEffect(() => {
     const savedLocale = localStorage.getItem(KEY_LOCALE)
-    if (savedLocale) {
+    if (savedLocale !== null) {
       setLocale(getLocaleFromString(savedLocale))
     }
   }, [])
