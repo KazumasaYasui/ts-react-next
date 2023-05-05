@@ -16,6 +16,7 @@ import { Clock } from "./components/Clock";
 import { Parent as UseContextSample } from './components/UseContextSample';
 import { ImageUploader as UseRefSample } from './components/UseRefSample';
 import { Parent as UseImperativeHandleSample } from './components/UseImperativeHandleSample';
+import { CustomHookSample } from './components/CustomHookSample';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(
@@ -38,6 +39,7 @@ root.render(
     <UseContextSample />
     <UseRefSample />
     <UseImperativeHandleSample />
+    <CustomHookSample />
   </React.StrictMode>
 );
 

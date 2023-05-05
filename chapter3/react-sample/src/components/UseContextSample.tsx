@@ -20,6 +20,7 @@ const Child = () => {
 
   return (
     <div>
+      <h2>useContextSample</h2>
       <p>現在時刻: {now.toLocaleString()}</p>
       <GrandChild />
     </div>

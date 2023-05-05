@@ -40,6 +40,7 @@ export const ImageUploader = () => {
 
   return (
     <div>
+      <h2>useRefSample</h2>
       <p style={{ textDecoration: 'underline' }} onClick={onClickText}>
         画像をアップロード
       </p>

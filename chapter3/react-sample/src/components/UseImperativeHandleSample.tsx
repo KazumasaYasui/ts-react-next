@@ -26,6 +26,7 @@ export const Parent = () => {
 
   return (
     <div>
+      <h2>useImperativeHandleSample</h2>
       <button onClick={onClick}>Show Message</button>
       <Child ref={childRef} />
     </div>
